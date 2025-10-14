@@ -74,7 +74,7 @@ rundll32 PowerChell.dll,Start -c "$PSVersionTable"
 
 In PowerShell v3+, Microsoft added a built-in module named [`PSReadLine`](https://github.com/PowerShell/PSReadLine) to bring a bash-like experience to the PowerShell console. PowerChell doesn't load any module by design, so if you want to enable features such as syntax highlighting and other goodies that this module implements, you need to load it manually.
 
-However, this has a **side effect in regard to detection by EDR**. In doing so, you will also enable PowerShell command logging to the current uesr's console history file `%APPDATA%\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt`. This file is actively monitored by some security solutions (see [issue #1](https://github.com/scrt/PowerChell/issues/1)).
+However, this has a **side effect in regard to detection by EDR**. In doing so, you will also enable PowerShell command logging to the current user's console history file `%APPDATA%\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt`. This file is actively monitored by some security solutions (see [issue #1](https://github.com/scrt/PowerChell/issues/1)).
 
 To load this module, and disable console history, you should do the following.
 
